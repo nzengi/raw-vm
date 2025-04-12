@@ -1,10 +1,19 @@
+package provi
+
 import scala.collection.mutable
 import scala.util.{Try, Success, Failure}
 import java.math.BigInteger
+import core.gas._
+import core.EVMOpType
+import core.EVMOp
 
 // Constants
-val STACK_SIZE_LIMIT: Int = 1024
-val MEMORY_SIZE_LIMIT: Int = 1024 * 1024 // 1MB
+object Constants {
+  val STACK_SIZE_LIMIT: Int = 1024
+  val MEMORY_SIZE_LIMIT: Int = 1024 * 1024 // 1MB
+}
+
+import Constants._
 
 // Errors
 sealed trait ExecutionError extends Exception

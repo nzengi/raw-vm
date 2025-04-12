@@ -1,7 +1,12 @@
-import scala.collection.mutable
+package core
 
-// Gas cost type for EVM operations
-type GasCost = Long
+package object gas {
+  // Gas cost type for EVM operations
+  type GasCost = Long
+}
+
+import core.gas._
+import scala.collection.mutable
 
 // Represents the type of EVM operation
 sealed trait EVMOpType

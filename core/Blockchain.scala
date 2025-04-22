@@ -6,6 +6,7 @@ import scala.util.{Try, Success, Failure}
 import java.security.{KeyPair, MessageDigest}
 import java.util.{Timer, TimerTask, UUID}
 import java.time.Instant
+import core.tx.{Transaction, TransactionFee}
 
 // İşlem sonucu
 case class TransactionResult(

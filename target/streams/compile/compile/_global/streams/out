@@ -1,0 +1,311 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:453:60: value creator is not a member of core.Transaction[0m
+[0m[[0m[31merror[0m] [0m[0m    if (node.transactions.exists(tx => tx.id.isEmpty || tx.creator.isEmpty)) return false[0m
+[0m[[0m[31merror[0m] [0m[0m                                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:204:51: implicit numeric widening[0m
+[0m[[0m[31merror[0m] [0m[0m        syncStats = syncStats.copy(targetHeight = maxHeight)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:314:22: discarded non-Unit value[0m
+[0m[[0m[31merror[0m] [0m[0m    randomPeers.find { peer =>[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:353:61: implicit numeric widening[0m
+[0m[[0m[31merror[0m] [0m[0m            syncStats = syncStats.copy(currentHeight = node.height)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:4:26: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.concurrent.{Future, Promise, ExecutionContext}[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:4:34: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.concurrent.{Future, Promise, ExecutionContext}[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:5:20: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.{Try, Success, Failure}[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:5:25: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.{Try, Success, Failure}[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:5:34: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.{Try, Success, Failure}[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:222:9: local val endHeight in method identifyMissingBlocks is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    val endHeight = if (fastSync && highestSeenHeight > 1000) {[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/BlockSynchronizer.scala:308:44: parameter value height in method downloadNode is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  private def downloadNode(nodeId: String, height: Int): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/NetworkNode.scala:91:20: not found: type ExecutionContext[0m
+[0m[[0m[31merror[0m] [0m[0m)(implicit val ec: ExecutionContext) {[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:110:20: value setTreasuryAddress is not a member of core.RewardSystem[0m
+[0m[[0m[31merror[0m] [0m[0m      rewardSystem.setTreasuryAddress(s"treasury-$nodeId")[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:117:32: not enough arguments for method apply: (nonce: Long, from: String, to: Option[String], value: Long, fee: core.tx.TransactionFee, data: Option[Array[Byte]], signature: Option[Array[Byte]], timestamp: Long, txType: Int): core.tx.Transaction in object Transaction.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter value.[0m
+[0m[[0m[31merror[0m] [0m[0m    val genesisTx = Transaction([0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:253:36: value distributeBlockRewards is not a member of core.RewardSystem[0m
+[0m[[0m[31merror[0m] [0m[0m    val totalReward = rewardSystem.distributeBlockRewards([0m
+[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:254:7: not found: value blockProducer[0m
+[0m[[0m[31merror[0m] [0m[0m      blockProducer = nodeId,[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:255:7: not found: value blockHeight[0m
+[0m[[0m[31merror[0m] [0m[0m      blockHeight = currentHeight,[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:256:17: reassignment to val[0m
+[0m[[0m[31merror[0m] [0m[0m      attesters = attesters[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:260:19: value validators in class PoSStakingSystem cannot be accessed as a member of core.PoSStakingSystem from class Blockchain in package core[0m
+[0m[[0m[31merror[0m] [0m[0m    stakingSystem.validators.get(nodeId).foreach { validator =>[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:266:21: value validators in class PoSStakingSystem cannot be accessed as a member of core.PoSStakingSystem from class Blockchain in package core[0m
+[0m[[0m[31merror[0m] [0m[0m      stakingSystem.validators(nodeId) = validator.copy([0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:280:17: value id is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m      .filter(_.id != nodeId)  // Üretici dışındaki doğrulayıcılar[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:297:19: value subtractBalance is not a member of core.PoSStakingSystem[0m
+[0m[[0m[31merror[0m] [0m[0m    stakingSystem.subtractBalance(address, amount)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:302:19: value addBalance is not a member of core.PoSStakingSystem[0m
+[0m[[0m[31merror[0m] [0m[0m    stakingSystem.addBalance(address, amount)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:307:19: value getBalance is not a member of core.PoSStakingSystem[0m
+[0m[[0m[31merror[0m] [0m[0m    stakingSystem.getBalance(address)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:312:19: value getTotalBalance is not a member of core.PoSStakingSystem[0m
+[0m[[0m[31merror[0m] [0m[0m    stakingSystem.getTotalBalance(address)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:316:46: not found: type RewardRecord[0m
+[0m[[0m[31merror[0m] [0m[0m  def getRewardHistory(address: String): Seq[RewardRecord] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:317:18: value getRewardHistory is not a member of core.RewardSystem[0m
+[0m[[0m[31merror[0m] [0m[0m    rewardSystem.getRewardHistory(address)[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:322:18: value getTotalRewardsForValidator is not a member of core.RewardSystem[0m
+[0m[[0m[31merror[0m] [0m[0m    rewardSystem.getTotalRewardsForValidator(address)[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:377:29: not enough arguments for method apply: (nonce: Long, from: String, to: Option[String], value: Long, fee: core.tx.TransactionFee, data: Option[Array[Byte]], signature: Option[Array[Byte]], timestamp: Long, txType: Int): core.tx.Transaction in object Transaction.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter value.[0m
+[0m[[0m[31merror[0m] [0m[0m    val tempTx = Transaction([0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:495:37: value getTotalStake is not a member of core.PoSStakingSystem[0m
+[0m[[0m[31merror[0m] [0m[0m      "totalStake" -> stakingSystem.getTotalStake,[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:172:26: implicit numeric widening[0m
+[0m[[0m[31merror[0m] [0m[0m    timer.schedule(task, blockInterval, blockInterval)[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:185:26: implicit numeric widening[0m
+[0m[[0m[31merror[0m] [0m[0m    timer.schedule(task, stakingUpdateInterval, stakingUpdateInterval)[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:4:26: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.concurrent.{Future, ExecutionContext}[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:5:20: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.{Try, Success, Failure}[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:5:25: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.{Try, Success, Failure}[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:5:34: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.{Try, Success, Failure}[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:6:32: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport java.security.{KeyPair, MessageDigest}[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:7:37: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport java.util.{Timer, TimerTask, UUID}[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:8:18: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport java.time.Instant[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:115:9: local val genesisFee in method initializeGenesis is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    val genesisFee = TransactionFee(21000, gasPrice, 1)[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:139:9: local val genesisNode in method initializeGenesis is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    val genesisNode = dagConsensus.createNode(Seq(genesisTx))[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:142:9: local val genesisObject in method initializeGenesis is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    val genesisObject = objectStore.createObject([0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:215:9: local val pendingTransactions in method produceBlock is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    val pendingTransactions = networkNode.getPendingTransactions[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:246:9: local val blockFullness in method produceBlock is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    val blockFullness = math.min(1.0, node.transactions.size / 100.0)[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:261:11: local val updatedStatus in value $anonfun is never used[0m
+[0m[[0m[31merror[0m] [0m[0m      val updatedStatus = validator.status.copy([0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:285:9: local val attestationRatio in method getBlockAttesters is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    val attestationRatio = 0.8[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:286:9: local val attestersCount in method getBlockAttesters is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    val attestersCount = Math.max(1, (activeValidators.size * attestationRatio).toInt)[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:301:15: private method addBalance in class Blockchain is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  private def addBalance(address: String, amount: Long): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:388:9: local val gasEstimation in method estimateTransactionFee is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    val gasEstimation = GasCalculator.calculateTransactionGas(tempTx)[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:276:33: parameter value node in method getBlockAttesters is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  private def getBlockAttesters(node: DAGNode): Set[String] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:328:5: parameter value objectRefs in method submitTransaction is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    objectRefs: Seq[String],[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:329:5: parameter value data in method submitTransaction is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    data: Array[Byte],[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:330:5: parameter value zkProof in method submitTransaction is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    zkProof: Option[Array[Byte]] = None,[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:331:5: parameter value priority in method submitTransaction is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    priority: Boolean = false[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:364:30: parameter value priority in method getRecommendedGasPrice is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  def getRecommendedGasPrice(priority: Boolean = false): GasPrice = {[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:374:5: parameter value priority in method estimateTransactionFee is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    priority: Boolean = false[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:454:5: parameter value typeTag in method createObject is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    typeTag: String,[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:455:5: parameter value data in method createObject is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    data: Array[Byte],[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:456:5: parameter value isShared in method createObject is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    isShared: Boolean = false,[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:457:5: parameter value isMutable in method createObject is never used[0m
+[0m[[0m[31merror[0m] [0m[0m    isMutable: Boolean = true[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:470:20: parameter value id in method updateObject is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  def updateObject(id: String, updateFn: ObjectData => Array[Byte]): Option[ObjectData] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:470:32: parameter value updateFn in method updateObject is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  def updateObject(id: String, updateFn: ObjectData => Array[Byte]): Option[ObjectData] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:475:22: parameter value id in method transferObject is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  def transferObject(id: String, newOwner: String): Option[ObjectData] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/Blockchain.scala:475:34: parameter value newOwner in method transferObject is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  def transferObject(id: String, newOwner: String): Option[ObjectData] = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:78:26: value maxPossibleFee is not a member of core.tx.TransactionFee[0m
+[0m[[0m[31merror[0m] [0m[0m  def maxFee: Long = fee.maxPossibleFee[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:117:16: value calculateFee is not a member of core.FeeManager[0m
+[0m[[0m[31merror[0m] [0m[0m    feeManager.calculateFee(tx)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:125:14: value success is not a member of core.GasUsageResult[0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean isSuccess?[0m
+[0m[[0m[31merror[0m] [0m[0m      result.success[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:171:14: value fee is not a member of core.GasUsageResult[0m
+[0m[[0m[31merror[0m] [0m[0m      result.fee[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:172:7: ambiguous implicit values:[0m
+[0m[[0m[31merror[0m] [0m[0m both object BigIntIsIntegral in object Numeric of type scala.math.Numeric.BigIntIsIntegral.type[0m
+[0m[[0m[31merror[0m] [0m[0m and object IntIsIntegral in object Numeric of type scala.math.Numeric.IntIsIntegral.type[0m
+[0m[[0m[31merror[0m] [0m[0m match expected type scala.math.Numeric[B][0m
+[0m[[0m[31merror[0m] [0m[0m    }.sum[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:180:35: value distributeFees is not a member of core.FeeManager[0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean distributeFee?[0m
+[0m[[0m[31merror[0m] [0m[0m    val distribution = feeManager.distributeFees(totalFees, validatorWeights)[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:216:16: value updateNetworkLoad is not a member of core.FeeManager[0m
+[0m[[0m[31merror[0m] [0m[0m    feeManager.updateNetworkLoad(fullnessRatio)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:288:16: value gasPriceAdjuster is not a member of core.FeeManager[0m
+[0m[[0m[31merror[0m] [0m[0m    feeManager.gasPriceAdjuster.getRecommendedGasPrice(priority)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:294:16: value getRecommendedFee is not a member of core.FeeManager[0m
+[0m[[0m[31merror[0m] [0m[0m    feeManager.getRecommendedFee(gasEstimation)[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:12:17: imported `Transaction` is permanently hidden by definition of object Transaction in package core[0m
+[0m[[0m[31merror[0m] [0m[0mimport core.tx.{Transaction, TransactionFee}[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:4:20: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.{Try, Success, Failure}[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:4:25: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.{Try, Success, Failure}[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:4:34: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport scala.util.{Try, Success, Failure}[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:8:46: Unused import[0m
+[0m[[0m[31merror[0m] [0m[0mimport java.security.{Signature, KeyFactory, PublicKey}[0m
+[0m[[0m[31merror[0m] [0m[0m                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:97:15: private val feeManager in class DAGConsensus is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  private val feeManager = new FeeManager()[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/DAGConsensus.scala:213:15: private method updateTransactionPoolLoad in class DAGConsensus is never used[0m
+[0m[[0m[31merror[0m] [0m[0m  private def updateTransactionPoolLoad(node: DAGNode): Unit = {[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:261:9: value += is not a member of Long[0m
+[0m[[0m[31merror[0m] [0m[0m  Expression does not convert to assignment because:[0m
+[0m[[0m[31merror[0m] [0m[0m    value getOrElse is not a member of Array[Byte][0m
+[0m[[0m[31merror[0m] [0m[0m    expansion: gas = gas.+(calculateDataGas(tx.data.<getOrElse: error>(Array.emptyByteArray)))[0m
+[0m[[0m[31merror[0m] [0m[0m    gas += calculateDataGas(tx.data.getOrElse(Array.emptyByteArray))[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:264:12: value isContractCreation is not a member of core.Transaction[0m
+[0m[[0m[31merror[0m] [0m[0m    if (tx.isContractCreation) {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:266:19: value isContractCall is not a member of core.Transaction[0m
+[0m[[0m[31merror[0m] [0m[0m    } else if (tx.isContractCall) {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:268:14: value value is not a member of core.Transaction[0m
+[0m[[0m[31merror[0m] [0m[0m      if (tx.value > 0) {[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:271:19: value isDelegateCall is not a member of core.Transaction[0m
+[0m[[0m[31merror[0m] [0m[0m    } else if (tx.isDelegateCall) {[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:959:6: not found: type TransactionFee[0m
+[0m[[0m[31merror[0m] [0m[0m  ): TransactionFee = {[0m
+[0m[[0m[31merror[0m] [0m[0m     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:967:7: not found: value TransactionFee[0m
+[0m[[0m[31merror[0m] [0m[0m      TransactionFee([0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:968:18: reassignment to val[0m
+[0m[[0m[31merror[0m] [0m[0m        gasLimit = gasLimit,[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:969:9: not found: value gasPrice[0m
+[0m[[0m[31merror[0m] [0m[0m        gasPrice = recommendedGasPrice,[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:970:22: reassignment to val[0m
+[0m[[0m[31merror[0m] [0m[0m        maxFeePerGas = maxFeePerGas,[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:971:30: reassignment to val[0m
+[0m[[0m[31merror[0m] [0m[0m        maxPriorityFeePerGas = maxPriorityFeePerGas[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:977:7: not found: value TransactionFee[0m
+[0m[[0m[31merror[0m] [0m[0m      TransactionFee([0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:978:18: reassignment to val[0m
+[0m[[0m[31merror[0m] [0m[0m        gasLimit = gasLimit,[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:979:9: not found: value gasPrice[0m
+[0m[[0m[31merror[0m] [0m[0m        gasPrice = recommendedGasPrice,[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:980:9: not found: value maxFeePerGas[0m
+[0m[[0m[31merror[0m] [0m[0m        maxFeePerGas = recommendedGasPrice.total,[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:981:9: not found: value maxPriorityFeePerGas[0m
+[0m[[0m[31merror[0m] [0m[0m        maxPriorityFeePerGas = 0[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:740:22: discarded non-Unit value[0m
+[0m[[0m[31merror[0m] [0m[0m    collectedFees.put(validator, currentFee + fee)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:781:22: discarded non-Unit value[0m
+[0m[[0m[31merror[0m] [0m[0m    collectedFees.put(validator, 0L)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:803:29: discarded non-Unit value[0m
+[0m[[0m[31merror[0m] [0m[0m      gasPriceHistory.remove(oldestTime)[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/zengi/Desktop/raw-vm/core/GasSystem.scala:996:14: implicit numeric widening[0m
+[0m[[0m[31merror[0m] [0m[0m    Math.min(MAX_GAS_LIMIT, Math.max(21000L, limit))[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m178 errors found[0m

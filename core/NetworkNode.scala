@@ -91,8 +91,8 @@ class NetworkNode(
 )(implicit val ec: ExecutionContext) {
   import MessageType._
   
-  // Bağlantılı düğümler
-  private val peers = mutable.Set[String]()
+  // Bağlantılı düğümler - made public so it can be accessed by BlockSynchronizer
+  val peers = mutable.Set[String]()
   
   // Mesaj işleyiciler
   private val messageHandlers = mutable.Map[Class[_], NetworkMessage => Unit]()

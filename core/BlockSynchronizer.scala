@@ -475,14 +475,20 @@ class BlockSynchronizer(
  */
 object BlockSynchronizer {
   /**
-   * Yeni bir senkronizasyon oluşturur
-   * @param nodeId Düğüm kimliği
-   * @param dagConsensus DAG konsensus mekanizması
-   * @param networkNode Ağ düğümü
-   * @param executionContext Yürütme bağlamı
-   * @return Blok senkronizasyon nesnesi
+   * Creates a new BlockSynchronizer
+   *
+   * @param nodeId Node ID
+   * @param dagConsensus DAG consensus mechanism
+   * @param networkNode Network node
+   * @param executionContext Execution context
+   * @return A new BlockSynchronizer instance
    */
-  def create(nodeId: String, dagConsensus: DAGConsensus, networkNode: NetworkNode, executionContext: ExecutionContext): BlockSynchronizer = {
+  def create(
+    nodeId: String,
+    dagConsensus: DAGConsensus,
+    networkNode: NetworkNode,
+    executionContext: ExecutionContext
+  ): BlockSynchronizer = {
     new BlockSynchronizer(nodeId, dagConsensus, networkNode, executionContext)
   }
 } 

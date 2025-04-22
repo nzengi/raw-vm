@@ -1,0 +1,5 @@
+-J-Xmx2G
+-J-XX:+UseG1GC
+-J-XX:MaxGCPauseMillis=200
+-Djava.awt.headless=true
+-java-home /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home 

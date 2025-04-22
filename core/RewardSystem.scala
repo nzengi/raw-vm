@@ -509,4 +509,14 @@ class EpochRewards(val epochNumber: Int) {
  */
 object RewardSystem {
   def apply(): RewardSystem = new RewardSystem()
+  
+  /**
+   * Creates a new RewardSystem with the given staking system
+   *
+   * @param stakingSystem The staking system to use for rewards
+   * @return A new RewardSystem instance
+   */
+  def create(stakingSystem: PoSStakingSystem): RewardSystem = {
+    new RewardSystem(stakingSystem)
+  }
 } 

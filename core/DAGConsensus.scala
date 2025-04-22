@@ -8,6 +8,9 @@ import java.time.Instant
 import java.security.{Signature, KeyFactory, PublicKey}
 import java.security.spec.X509EncodedKeySpec
 
+// Import Transaction and TransactionFee from the correct package
+import core.tx.{Transaction, TransactionFee}
+
 // DAG'daki bir düğümü temsil eder
 case class DAGNode(
   id: String,                      // Benzersiz düğüm tanımlayıcısı

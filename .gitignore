@@ -1,0 +1,126 @@
+# Scala/SBT specific
+*.class
+*.log
+.cache/
+.history/
+.lib/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+project/project/
+project/target/
+.bloop/
+.metals/
+.bsp/
+
+# SBT native packager
+native/
+
+# IntelliJ IDEA specific
+.idea/
+.idea_modules/
+*.iml
+*.iws
+*.ipr
+out/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# VSCode specific
+.vscode/
+.metals/
+.bloop/
+project/metals.sbt
+.scalafmt.conf
+.vscode/
+
+# Eclipse specific
+.classpath
+.project
+.settings/
+.worksheet/
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux specific
+*~
+.directory
+.Trash-*
+
+# Keys and credentials
+keys/
+**/application.conf
+**/application.dev.conf
+**/application.prod.conf
+**/application.test.conf
+*.keystore
+*.p12
+*.pem
+*.jks
+
+# Blockchain specific
+data/
+chaindata/
+wallet/
+node*/
+logs/
+
+# Database
+*.db
+*.sqlite
+*.mv.db
+*.trace.db
+
+# Logs
+log/
+logs/
+*.log
+log4j.properties
+logback.xml
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Exceptions
+!lib/*.jar 

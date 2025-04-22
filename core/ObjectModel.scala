@@ -3,6 +3,7 @@ package core
 import scala.collection.mutable
 import java.security.MessageDigest
 import java.util.{Base64, UUID}
+import java.time.Instant
 
 // Nesne Modeli
 // Sui ve Move dilinin nesne modelinden esinlenilmiştir
@@ -22,29 +23,52 @@ case class ObjectMetadata(
   isMutable: Boolean   // Değiştirilebilir mi?
 )
 
-// Blockchain üzerindeki veri nesnesi
+/**
+ * Represents blockchain object data
+ */
 case class ObjectData(
-  ref: ObjectRef,
-  metadata: ObjectMetadata,
-  data: Array[Byte],   // Nesne içeriği (serileştirilmiş)
-  previousVersions: Seq[ObjectRef] = Seq.empty  // MVCC için önceki versiyonlar
+  id: String,
+  creator: String,
+  typeTag: String,
+  data: Array[Byte],
+  owners: Set[String],
+  version: Long = 0,
+  createdAt: Long = Instant.now.getEpochSecond,
+  lastModified: Long = Instant.now.getEpochSecond,
+  isShared: Boolean = false,
+  isMutable: Boolean = true
 ) {
-  lazy val digest: String = {
-    val content = s"${ref.toString}|${metadata.typeTag}|${data.length}"
-    val hash = MessageDigest.getInstance("SHA-256").digest(content.getBytes) 
-    Base64.getEncoder.encodeToString(hash)
+  // Simplified equality for arrays
+  override def equals(obj: Any): Boolean = obj match {
+    case other: ObjectData =>
+      id == other.id &&
+      creator == other.creator &&
+      typeTag == other.typeTag &&
+      java.util.Arrays.equals(data, other.data) &&
+      owners == other.owners &&
+      version == other.version &&
+      createdAt == other.createdAt &&
+      lastModified == other.lastModified &&
+      isShared == other.isShared &&
+      isMutable == other.isMutable
+    case _ => false
   }
   
-  // Yeni bir versiyon oluştur
-  def withNewVersion(newData: Array[Byte]): ObjectData = {
-    val newVersion = ref.version + 1
-    val newRef = ObjectRef(ref.id, newVersion)
-    ObjectData(
-      newRef,
-      metadata,
-      newData,
-      previousVersions :+ ref
-    )
+  // Ensure hashCode is consistent with equals
+  override def hashCode(): Int = {
+    val prime = 31
+    var result = 1
+    result = prime * result + id.hashCode
+    result = prime * result + creator.hashCode
+    result = prime * result + typeTag.hashCode
+    result = prime * result + java.util.Arrays.hashCode(data)
+    result = prime * result + owners.hashCode
+    result = prime * result + version.hashCode.toInt
+    result = prime * result + createdAt.hashCode.toInt
+    result = prime * result + lastModified.hashCode.toInt
+    result = prime * result + isShared.hashCode
+    result = prime * result + isMutable.hashCode
+    result
   }
 }
 
@@ -58,14 +82,14 @@ class ObjectStore {
   
   // Nesne ekleme
   def addObject(obj: ObjectData): Unit = {
-    objects(obj.ref.id) = obj
+    objects(obj.id) = obj
     
-    val typeSet = versionsByType.getOrElseUpdate(obj.metadata.typeTag, mutable.Set.empty)
-    typeSet.add(obj.ref.id)
+    val typeSet = versionsByType.getOrElseUpdate(obj.typeTag, mutable.Set.empty)
+    typeSet.add(obj.id)
     
     // Geçmiş versiyonları kaydet
-    val history = objectHistory.getOrElseUpdate(obj.ref.id, mutable.Map.empty)
-    history(obj.ref.version) = obj
+    val history = objectHistory.getOrElseUpdate(obj.id, mutable.Map.empty)
+    history(obj.version) = obj
   }
   
   // ID'ye göre nesne alma
@@ -88,20 +112,20 @@ class ObjectStore {
   // Nesneyi güncelleme (değişmez, yeni bir versiyon oluşturur)
   def updateObject(id: String, updateFn: ObjectData => Array[Byte]): Option[ObjectData] = {
     objects.get(id).map { obj =>
-      if (!obj.metadata.isMutable) {
-        throw new IllegalStateException(s"Object ${obj.ref} is not mutable")
+      if (!obj.isMutable) {
+        throw new IllegalStateException(s"Object ${obj.id} is not mutable")
       }
       
       val newData = updateFn(obj)
-      val newObj = obj.withNewVersion(newData)
+      val newObj = obj.copy(data = newData, lastModified = Instant.now.getEpochSecond)
       
       // Yeni versiyonu nesne deposuna ekle
       objects(id) = newObj
       
       // Geçmiş versiyonu da kaydet
       val history = objectHistory.getOrElseUpdate(id, mutable.Map.empty)
-      history(obj.ref.version) = obj
-      history(newObj.ref.version) = newObj
+      history(obj.version) = obj
+      history(newObj.version) = newObj
       
       newObj
     }
@@ -110,22 +134,17 @@ class ObjectStore {
   // Nesne sahipliğini değiştirme
   def transferObject(id: String, newOwner: String): Option[ObjectData] = {
     objects.get(id).map { obj =>
-      val newMetadata = obj.metadata.copy(owners = Set(newOwner))
+      val newMetadata = obj.copy(owners = Set(newOwner))
       val newData = obj.data // veri değişmiyor, sadece meta veri
-      val newObj = ObjectData(
-        ObjectRef(obj.ref.id, obj.ref.version + 1),
-        newMetadata,
-        newData,
-        obj.previousVersions :+ obj.ref
-      )
+      val newObj = obj.copy(owners = Set(newOwner), lastModified = Instant.now.getEpochSecond)
       
       // Yeni versiyonu nesne deposuna ekle
       objects(id) = newObj
       
       // Geçmiş versiyonu da kaydet
       val history = objectHistory.getOrElseUpdate(id, mutable.Map.empty)
-      history(obj.ref.version) = obj
-      history(newObj.ref.version) = newObj
+      history(obj.version) = obj
+      history(newObj.version) = newObj
       
       newObj
     }
@@ -151,7 +170,7 @@ class ObjectStore {
       isMutable
     )
     
-    val obj = ObjectData(ref, metadata, data)
+    val obj = ObjectData(id, creator, typeTag, data, owners, 0, System.currentTimeMillis(), System.currentTimeMillis(), isShared, isMutable)
     addObject(obj)
     obj
   }

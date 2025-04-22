@@ -1,107 +1,107 @@
-# ZK-DAG-PoS Blockchain Projesi
+# ZK-DAG-PoS Blockchain Project
 
-Bu proje, nesne tabanlı, DAG (Yönlendirilmiş Asiklik Graf) yapısı üzerine kurulu, Proof of Stake konsensus mekanizması kullanan ve Zero-Knowledge kanıtları destekleyen yenilikçi bir blockchain platformudur.
+This project is an innovative blockchain platform built on an object-oriented, DAG (Directed Acyclic Graph) structure, using Proof of Stake consensus mechanism and supporting Zero-Knowledge proofs.
 
-## Özellikler
+## Features
 
-- **DAG Tabanlı**: Paralel işleme ile yüksek verimlilik
-- **Nesne Merkezli**: Sui ve Move'dan ilham alan nesne merkezli programlama modeli
-- **Proof of Stake**: Enerji verimli konsensus mekanizması
-- **Zero-Knowledge Entegrasyonu**: Özel işlemler ve doğrulanabilir hesaplamalar
-- **Ölçeklenebilir Mimari**: Yüksek performans için tasarlanmış
+- **DAG-Based**: High efficiency with parallel processing
+- **Object-Oriented**: Object-centered programming model inspired by Sui and Move
+- **Proof of Stake**: Energy-efficient consensus mechanism
+- **Zero-Knowledge Integration**: Private transactions and verifiable computations
+- **Scalable Architecture**: Designed for high performance
 
-## Teknoloji Yığını
+## Technology Stack
 
-- **Dil**: Scala 2.13
-- **Ağ İletişimi**: Akka Actor, Akka HTTP
-- **Kriptografi**: Bouncy Castle
-- **Veri İşleme**: Circe (JSON)
+- **Language**: Scala 2.13
+- **Network Communication**: Akka Actor, Akka HTTP
+- **Cryptography**: Bouncy Castle
+- **Data Processing**: Circe (JSON)
 
-## Kullanılan Algoritmalar
+## Algorithms Used
 
-- **Konsensus**: BullShark / HotStuff varyantı
-- **Kriptografi**: Ed25519, BLS imzaları
+- **Consensus**: BullShark / HotStuff variant
+- **Cryptography**: Ed25519, BLS signatures
 - **Zero-Knowledge**: PlonK, zk-SNARKs
-- **Eşzamanlılık Kontrolü**: MVCC (Multi-Version Concurrency Control)
+- **Concurrency Control**: MVCC (Multi-Version Concurrency Control)
 
-## Proje Yapısı
+## Project Structure
 
-Proje ana bileşenleri:
+Main project components:
 
-- **core/**: Ana modüller ve alt sistemler
+- **core/**: Core modules and subsystems
 
-  - `DAGConsensus.scala`: DAG tabanlı konsensus mekanizması
-  - `ObjectModel.scala`: Nesne modeli ve depolama
-  - `ZKSystem.scala`: Zero-Knowledge sistem entegrasyonu
-  - `PoSStaking.scala`: Proof of Stake ve validatör yönetimi
-  - `NetworkNode.scala`: P2P ağ iletişimi
-  - `Blockchain.scala`: Ana blockchain mantığı
-  - `Main.scala`: Uygulama giriş noktası
+  - `DAGConsensus.scala`: DAG-based consensus mechanism
+  - `ObjectModel.scala`: Object model and storage
+  - `ZKSystem.scala`: Zero-Knowledge system integration
+  - `PoSStaking.scala`: Proof of Stake and validator management
+  - `NetworkNode.scala`: P2P network communication
+  - `Blockchain.scala`: Main blockchain logic
+  - `Main.scala`: Application entry point
 
-- **provi/**: VM ve yürütme modüleri
-  - `sca_executor.scala`: VM operasyon yürütücüsü
+- **provi/**: VM and execution modules
+  - `sca_executor.scala`: VM operation executor
 
-## Başlangıç
+## Getting Started
 
-### Gereksinimler
+### Requirements
 
 - JDK 11+
 - SBT (Scala Build Tool)
 
-### Kurulum
+### Installation
 
 ```bash
-# Projeyi klonla
+# Clone the project
 git clone https://github.com/username/zk-dag-pos-blockchain.git
 cd zk-dag-pos-blockchain
 
-# Derle
+# Compile
 sbt compile
 
-# Çalıştır (Genesis düğümü)
+# Run (Genesis node)
 sbt "run --node-id node-1 --endpoint 127.0.0.1:9000"
 
-# İkinci düğüm (başka bir terminalde)
+# Second node (in another terminal)
 sbt "run --node-id node-2 --endpoint 127.0.0.1:9001 --bootstrap 127.0.0.1:9000"
 ```
 
-### Komut Satırı Arayüzü
+### Command Line Interface
 
-Düğüm başlatıldığında aşağıdaki komutları kullanabilirsiniz:
+When the node is started, you can use the following commands:
 
-- `info` - Blockchain bilgisini gösterir
-- `validator register <isim> <miktar> <oran>` - Doğrulayıcı olarak kaydolur
-- `stake <validator-id> <miktar>` - Bir doğrulayıcıya stake ekler
-- `object create <tip> <veri>` - Yeni bir nesne oluşturur
-- `help` - Tüm komutları listeler
-- `exit` - Düğümü kapatır
+- `info` - Displays blockchain information
+- `validator register <name> <amount> <rate>` - Registers as a validator
+- `stake <validator-id> <amount>` - Adds stake to a validator
+- `object create <type> <data>` - Creates a new object
+- `help` - Lists all commands
+- `exit` - Shuts down the node
 
-## Mimari
+## Architecture
 
-Bu blockchain platformu aşağıdaki ana bileşenlerden oluşur:
+This blockchain platform consists of the following main components:
 
-1. **Nesne Deposu**: Blockchain'in dünya durumunu nesne olarak depolar
-2. **DAG Konsensus**: İşlemleri paralel olarak işleyip sıralayan sistem
-3. **Staking Sistemi**: Doğrulayıcıları ve stake'leri yöneten PoS mekanizması
-4. **ZK Sistemi**: Zero-Knowledge kanıtlarını doğrulayan ve yöneten modül
-5. **Ağ İletişimi**: P2P protokolünü yöneten bileşen
+1. **Object Store**: Stores the blockchain's world state as objects
+2. **DAG Consensus**: System that processes and orders transactions in parallel
+3. **Staking System**: PoS mechanism that manages validators and stakes
+4. **ZK System**: Module that validates and manages Zero-Knowledge proofs
+5. **Network Communication**: Component that manages the P2P protocol
 
-## Geliştirme Planı
+## Development Plan
 
-- [ ] Temel konsensus ve nesne modelinin tamamlanması
-- [ ] Ağ iletişiminin iyileştirilmesi (Akka HTTP/WebSocket)
-- [ ] ZK entegrasyonunun gerçek kriptografi kütüphaneleriyle geliştirilmesi
-- [ ] Smart Contract desteği (WASM veya özel VM)
-- [ ] Kapsamlı test ve performans iyileştirmeleri
+- [ ] Completion of basic consensus and object model
+- [ ] Improvement of network communication (Akka HTTP/WebSocket)
+- [ ] Development of ZK integration with real cryptography libraries
+- [ ] Smart Contract support (WASM or custom VM)
+- [ ] Comprehensive testing and performance improvements
 
-## Katkıda Bulunma
+## Contributing
 
-Katkıda bulunmak için:
+To contribute:
 
-1. Bu projeyi fork'layın
-2. Değişikliklerinizi yapın ve test edin
-3. Pull request gönderin
+1. Fork this project
+2. Make your changes and test them
+3. Submit a pull request
 
-## Lisans
+## License
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
